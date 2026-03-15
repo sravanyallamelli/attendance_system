@@ -36,6 +36,7 @@ class Leave(models.Model):
     attachment = models.TextField(null=True, blank=True)
     status = models.CharField(max_length=20, default='pending')
     created_at = models.DateTimeField(auto_now_add=True)
+    mobile = models.CharField(max_length=15, null=True, blank=True)
 
 class Holiday(models.Model):
     date = models.DateField(unique=True)
