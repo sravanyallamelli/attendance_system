@@ -32,6 +32,10 @@ ALLOWED_HOSTS = [
     'localhost'
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://attendancesystem-production-3444.up.railway.app'
+]
+
 # Application definition
 
 INSTALLED_APPS = [
