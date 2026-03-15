@@ -1,0 +1,8 @@
+{
+  "name": "Face Attendance Pro",
+  "description": "A mobile-responsive attendance system with face detection and geolocation tracking.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}
