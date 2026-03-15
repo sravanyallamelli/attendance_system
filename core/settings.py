@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'attendance-system-cwjl.onrender.com', 
+    'attendancesystem-production-3444.up.railway.app',
     '127.0.0.1', 
     'localhost'
 ]
