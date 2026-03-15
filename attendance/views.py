@@ -19,6 +19,10 @@ class LoginView(APIView):
 class AttendanceView(APIView):
     def post(self, request):
         mobile = request.data.get('mobile')
+        
+        # ADD THIS LINE HERE for debugging
+        print(f"DEBUG: Received mobile: '{mobile}'") 
+        
         try:
             user = UserProfile.objects.get(mobile=mobile)
             Attendance.objects.create(
@@ -30,8 +34,9 @@ class AttendanceView(APIView):
             )
             return Response({"success": True})
         except UserProfile.DoesNotExist:
+            # If you see this error in Postman, the 'mobile' in your DB 
+            # doesn't match the 'mobile' in your print statement above.
             return Response({"error": "User not found"}, status=status.HTTP_404_NOT_FOUND)
-
 class AdminSummaryView(APIView):
     def get(self, request):
         today = timezone.now().date()

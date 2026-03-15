@@ -14,7 +14,7 @@ from attendance.views import (
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/login/', LoginView.as_view()),
-    path('api/attendance/', AttendanceView.as_view()),
+    path('api/attendance/', AttendanceView.as_view(), name='attendance'),
     path('api/admin/staff/', StaffListCreateView.as_view()),
     path('api/leaves/', LeaveView.as_view()),
     path('api/admin/reports/', ReportsView.as_view()),
