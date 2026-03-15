@@ -25,6 +25,8 @@ SECRET_KEY = 'django-insecure-+n&o8ob*7z@x!1+lh_)scddwnt0!@6a+psx*ea&4%-dmfvt**&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+APPEND_SLASH = False
+
 ALLOWED_HOSTS = [
     'attendance-system-cwjl.onrender.com', 
     'attendancesystem-production-3444.up.railway.app',
@@ -34,6 +36,11 @@ ALLOWED_HOSTS = [
 
 CSRF_TRUSTED_ORIGINS = [
     'https://attendancesystem-production-3444.up.railway.app'
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "https://your-frontend-domain.com",
 ]
 
 # Application definition
